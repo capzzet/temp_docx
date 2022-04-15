@@ -1,0 +1,111 @@
+{%extends 'resume/html/base.html'%}
+{%load static%}
+
+{%block head%}
+<link type="text/css"  href='{% static "resume/css/resume.css" %}' rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+{%endblock head%}
+{%block body%}
+<div class="resume_intro">
+    <div class="container">
+        <div class="back">
+<h1>Создай резюме</h1>
+
+<form action="{% url 'resume' %}" method="post" >
+    {% csrf_token %}
+    <div class="form-error">{{ form.non_field_errors }}</div>
+    <section class="base">
+    <h4>Выберите образец резюме</h4>
+    <select name="doc_template">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+        <h5>Основная информация</h5>
+    <div class="basic">
+        <p><input type="text" name="Surname" class="feedback-input" placeholder="Фамилия"></p>
+        <p><input type="text" name="name" class="feedback-input" placeholder="Имя"></p>
+        <p><input type="text" name="patronymic" class="feedback-input" placeholder="Отчество"></p>
+        <p><input type="text" name="position" class="feedback-input" placeholder="Должность"></p>
+        <p><input type="text" name="wage" class="feedback-input" placeholder="Желаемая заработная плата"></p>
+        <H6>занятость:</H6>
+        <select name="employment" >
+        <option value="Complete">Полная</option>
+        <option value="Partial">Частичная</option>
+        <option value="Design">Проектная</option>
+        <option value="Internship">Стажировка</option>
+        <option value="Waving">Волнотёрство</option>
+        </select>
+        <H6>график:</H6>
+        <select name="schedule">
+        <option value="full_day">Полный день</option>
+        <option value="Shift_work">Сменный график</option>
+        <option value="Flexible_schedule">Гибкий график</option>
+        <option value="Distant_work">Удаленная работа</option>
+        <option value="Shift_method_2">Вахтовый метод</option>
+    </select>
+
+    </div>
+        </section>
+<section class="personal">
+    <h5>Личная информация</h5>
+    <p><input type="text" name="telephone" class="feedback-input" placeholder="Телефон"></p>
+    <p><input type="text" name="mail" class="feedback-input" placeholder="Почта"></p>
+    <p><input type="text" name="city" class="feedback-input" placeholder="Город проживания"></p>
+    <p><input type="text" name="birthday" class="feedback-input" placeholder="Дата рождения"></p>
+    <H6>Пол:</H6>
+    <select name="sex" >
+        <option value="Female">Женский</option>
+        <option value="male">Мужской</option>
+    </select>
+    <H6>Семейное положение:</H6>
+    <select name="Family" >
+        <option value="Single">Не замужем</option>
+        <option value="Single-children">Не замужем(есть дети)</option>
+        <option value="married">замужем</option>
+        <option value="married-children">замужем(есть дети)</option>
+        </select>
+</section>
+    <section class="skill">
+        <h5>Опыт работы</h5>
+        <p><input type="text" name="job_start" class="feedback-input" placeholder="Устроился">
+            <input type="text" name="job_end" class="feedback-input" placeholder="Уволился"></p>
+        <p><input type="text" name="job_Position" class="feedback-input" placeholder="Должность"></p>
+        <p><input type="text" name="Organization" class="feedback-input" placeholder="Организцаия"></p>
+        <p><textarea  name="job_responsibilities" class="feedback-input" placeholder="Должностные обязанности и достижения"></textarea>
+    </section>
+    <section class="Education">
+        <h5>Образование</h5>
+        <p><input type="text" name="educational_institution" class="feedback-input" placeholder="Учебное заведение"></p>
+        <p><input type="text" name="Faculty" class="feedback-input" placeholder="Факультет"></p>
+        <p><input type="text" name="Speciality" class="feedback-input" placeholder="Специальность"></p>
+        <p><input type="text" name="Year_of_ending" class="feedback-input" placeholder="Год окончания"></p>
+        <H6>Форма обучения:</H6>
+        <select name="Form_of_study" >
+        <option value="full-time">Очная</option>
+        <option value="Correspondence">Заочная</option>
+        <option value="Part-time">Очно-заочная</option>
+        <option value="Remote">Дистанционная</option>
+        </select>
+    </section>
+    <H6>языки и навыки:</H6>
+    <section class="slills">
+         <p><input type="text" name="lang" class="feedback-input" placeholder="Какими иностранными языками вы владеете?"></p>
+         <p><input type="text" name="attainments" class="feedback-input" placeholder="Навыки"></p>
+    </section>
+    <H5>Дополнительная информация:</H5>
+    <section class="Additional_information">
+        <p><input type="text" name="Recommendations" class="feedback-input" placeholder="Рекомендации"></p>
+        <p><input type="text" name="Hobby" class="feedback-input" placeholder="Хобби"></p>
+        <p><input type="text" name="Personal_qualities" class="feedback-input" placeholder="Личные качества"></p>
+    </section>
+    <input type="submit" value="download" class="button-submit">
+    <div class="ease"></div>
+
+</form>
+</div>
+        </div>
+    </div>
+{%endblock body%}

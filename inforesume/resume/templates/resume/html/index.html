@@ -1,0 +1,126 @@
+{%extends 'resume/html/base.html'%}
+{% load static %}
+    {%block head%}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    {%endblock head%}
+{%block body%}
+<div class="intro">
+    <div class="container">
+        <div class="intro_inner">
+            <h1 class="intro_title">Создай свое профессиональное резюме</h1>
+            <a href="{%url 'resume'%}" class="btn">Создать Резюме</a>
+        </div>
+</div>
+    <div class="intro_slider">
+        <div class="container">
+            <div class="slider_inner">
+                <div class="intro_slider_item"><a href="#what_is_constructor" class="intro_slider_links">Что такое конструктор?</a></div>
+                <div class="intro_slider_item"><a href="#Benefits" class="intro_slider_links">Преимущества</a></div>
+                <div class="intro_slider_item"><a href="#How_use" class="intro_slider_links">Как пользоваться?</a></div>
+                <div class="intro_slider_item"><a href="#contacts" class="intro_slider_links">Связаться</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="section what_is_back" id="what_is_constructor" >
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title">Что такое конструктор?</h2>
+        </div>
+        <div class="what_is">
+            <div class="what_is_item">
+                <img src="{% static 'resume/img/cv.png' %}" alt="">
+            </div>
+            <div class="what_is_item">
+                <img class="what_is_icon" src="{% static 'resume/img/1.png' %}" alt="">
+                <p class="what_is_text">Конструктор резюме — это сервис, задача которого — создание CV онлайн. Тут есть все необходимое: шаблоны с разными дизайнами, подсказки и примеры. Вас буквально ведут за руку по шагам.</p>
+                <img class="what_is_icon" src="{% static 'resume/img/2.png' %}" alt="">
+                <p class="what_is_text">Конструктор резюме позволяет менять расположение блоков и их последовательность внутри шаблона. Также есть автосортировка навыков. Из дизайнерских опций - выбор шрифта и цветового стиля. При этом все просто и интуитивно понятно.</p>
+                <img class="what_is_icon" src="{% static 'resume/img/3.png' %}" alt="">
+                <p class="what_is_text">Заполнив всю информацию о себе вы получаете готовое резюме онлайн , а также можете скачать файл в формате PDF.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section Benefits_back" id="Benefits">
+<div class="container">
+    <div class="section__header">
+        <h2 class="section__title" >Преимущества</h2>
+    </div>
+	<div class='Benefits'>
+		<div class="Benefits__item">
+			<img class="Benefits__icon" width="90" height="90" src="{% static 'resume/img/icons/44.png' %}" alt="">
+			<h4 class="Benefits__title">lorem</h4>
+			<div class="Benefits_text">Lorem ipsum dolor sit amet.</div>
+		</div>
+		<div class="Benefits__item">
+			<img class="Benefits__icon" width="90" height="90" src="{% static 'resume/img/icons/55.png' %}" alt="">
+			<h4 class="Benefits__title">lorem</h4>
+			<div class="Benefits_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, esse nemo?</div>
+		</div>
+		<div class="Benefits__item">
+			<img class="Benefits__icon" width="90" height="90" src="{% static 'resume/img/icons/33.png' %}" alt="">
+			<h4 class="Benefits__title">lorem</h4>
+			<div class="Benefits_text">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<section class="section  section--How_use" id="How_use">
+    <div class="container">
+
+        <div class="section__header">
+            <h2 class="section__title">Как пользоваться?</h2>
+        </div>
+
+        <div class="How_use">
+            <div class="How_use__item">
+                <img class="How_use__photo" src="{% static 'resume/img/icons/form.png' %}" alt="">
+                <div class="How_use__content">
+                    <div class="How_use__name">Заполните резюме</div>
+                    <div class="How_use__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</div>
+                </div>
+            </div>
+
+            <div class="How_use__item">
+                <img class="How_use__photo" src="{% static 'resume/img/icons/choose.png' %}" alt="">
+                <div class="How_use__content">
+                    <div class="How_use__name">Выберите дизайн шаблона</div>
+                    <div class="How_use__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</div>
+                </div>
+            </div>
+
+            <div class="How_use__item">
+                <img class="How_use__photo" src="{% static 'resume/img/icons/download.png' %}" alt="">
+                <div class="How_use__content">
+                    <div class="How_use__name">Скачайте резюме</div>
+                    <div class="How_use__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer" id="contacts">
+    <div class="footer__content">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__info">
+            <div class="footer__title">
+              Связаться с нами
+            </div>
+            <ul class="footer__list">
+              <li class="footer__adress">Телефон: +996 (777) 77-77-77</li>
+              <li class="footer__adress">Почта: inf@gmail.com</li>
+              <li class="footer__adress">Адрес: 2а ул. Чолпон-Атинская, Бишкек</li>
+            </ul>
+          </div>
+          <div class="footer__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.6758169490386!2d74.67486091538804!3d42.85857791146571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec8217752924b%3A0x334bbc4af21f45d8!2z0JPQvtGB0YPQtNCw0YDRgdGC0LLQtdC90L3QvtC1INC_0YDQtdC00L_RgNC40Y_RgtC40LUgItCY0L3RhNC-0LrQvtC8IiDQv9GA0Lgg0JzQuNC90LjRgdGC0LXRgNGB0YLQstC1INGG0LjRhNGA0L7QstC-0LPQviDRgNCw0LfQstC40YLQuNGPINCa0KA!5e0!3m2!1sru!2skg!4v1649954747354!5m2!1sru!2skg" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+{%endblock body%}
